@@ -1,0 +1,241 @@
+
+body {
+  font-family: 'Alegreya Sans SC', serif;
+  font-size: 1.2rem;
+  /* background-image: url('../images/concrete_seamless.png'); */
+  background-color: rgba(73, 121, 143, 0.50);
+}
+
+/* # 3 ^^ */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_links {
+    display: flex;
+    font-size: 1rem;
+    flex-direction: column;
+}
+
+/* # 4 ^^ */
+
+.nav_links a:visited {
+    color: #333;
+    text-decoration: none;
+}
+
+/* #5 ^^ */
+
+.pricing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    flex-basis: 450px;
+}
+
+/* # 6 ^ */
+
+.card header {
+    background: #288088;
+    border: solid 2px #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius:7px 7px 0 0 ;
+}
+
+/* # 7 ^^ */
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.gallery img {
+    border: 10px solid #2751a0;
+    margin: 10px;
+    width: 300px;
+}
+
+@keyframes logo_name{
+    from{
+      width: 50px;
+      opacity: 0;
+    }
+  
+    to{
+      width: 425px;
+      opacity: 1;
+    }
+  }
+  
+  #logo {
+    animation-name: logo_name;
+    animation-duration: 5s;
+}
+
+
+/* @media screen and (min-width: 850px){
+    header {
+        top: 0;
+        left: 0;
+        position: sticky;
+        flex-direction: row;
+        justify-content: space-between;
+        overflow: visible;
+        scroll-behavior: smooth;
+    }
+
+    .nav_links {
+        flex-direction: row;
+        font-size: 1.5rem;
+    }
+
+    .card {
+        z-index: -99;
+        overflow: hidden;
+        flex-basis: 250px;
+    }
+
+    .pricing {
+        overflow: hidden;
+    }
+
+} */
+
+/* GO TO EASE OF ACCESS and DISPLAY */
+/* If ease of access- animation turned off then it wont play
+animation, if it is turned on then it will play the animation  */
+
+@media screen and (prefers-reduced-motion: reduce){
+    #logo{
+        animation: none;
+    }
+
+}
+
+
+/* @media print { */
+/* greater than 1200 pixel work on it for now and then add the media print */
+/* @media screen and (min-width: 1200px){ */
+ /* @media print {
+    body {
+      background-image: none;
+      font-family: serif;
+    }
+
+    header{
+      display: block;
+    }
+
+
+    nav {
+      width: 100%;
+    } 
+
+    header img#logo {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  
+    }
+  
+    .pricing {
+      flex-direction: row; 
+      flex-wrap: nowrap;
+      align-items:flex-end;
+      overflow: visible;
+    }
+  
+    .card {
+      border: 2px solid #45ADDD;
+      flex-basis: 250px; 
+    } */
+/*     
+    .gallery,
+    #gallery {
+      display: none;
+
+  
+    }
+
+    div.pricing ul{
+      display: flex;
+      flex-direction: column;
+      font-size: larger;
+    }
+
+
+    .pricing li:nth-child(odd):before{
+      /* content: "👍"; */
+      /* content: "\01F44D";
+
+    }
+
+    .pricing li:nth-child(even)::after{
+      /* content: "👍"; */
+      /* content: "\01F44D";
+    
+    }
+s
+    ul.nav_links{
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  
+    footer{
+      position: block;
+    }   */
+
+
+
+
+
+
+    /* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
